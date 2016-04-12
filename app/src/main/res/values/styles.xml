@@ -1,0 +1,111 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.MenuButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:background">@drawable/buttonshape</item>
+    </style>
+
+    <style name="AppTheme.MenuButtonStart" parent="AppTheme.MenuButton">
+        <item name="android:layout_marginTop">48dp</item>
+    </style>
+
+    <style name="AppTheme.SplashTitle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:color">@color/primary_text</item>
+    </style>
+
+    <style name="AppTheme.SplashTitle2" parent="AppTheme.SplashTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:color">@color/primary_text</item>
+    </style>
+
+    <style name="AppTheme.SubPageTitle">
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:background">@color/primary</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="AppTheme.SubPageTitle2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:color">@color/secondary_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="AppTheme.SubPage">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/primary_light</item>
+    </style>
+
+    <style name="AppTheme.logoImg">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:contentDescription">@string/logo_description</item>
+    </style>
+
+    <style name="AppTheme.backToMenuButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:background">@drawable/backbuttonshape</item>
+        <item name="android:textColor">@color/primary_light</item>
+    </style>
+
+    <style name="AppTheme.SubPageText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.SecondaryMenuLayout">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/primary</item>
+    </style>
+
+    <style name="AppTheme.SubPageScrollView">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:scrollbarStyle">insideOverlay</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:fillViewport">true</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="AppTheme.ScrollableWrapper">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="AppTheme.LayoutMainPage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:alpha">0.8</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+</resources>

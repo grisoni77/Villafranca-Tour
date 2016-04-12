@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    tools:context="com.example.android.villa.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/subpage1"
+        style="@style/AppTheme.SubPage"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/AppTheme.SubPageTitle"
+            android:text="@string/pageTitle1" />
+
+        <ScrollView
+            style="@style/AppTheme.SubPageScrollView"
+            android:layout_weight="1">
+
+            <LinearLayout
+                style="@style/AppTheme.ScrollableWrapper">
+
+
+                <TextView
+                    style="@style/AppTheme.SubPageText"
+                    android:text="@string/ilcomune1" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            style="@style/AppTheme.SecondaryMenuLayout">
+
+            <Button
+                style="@style/AppTheme.backToMenuButton"
+                android:onClick="goToMenuPage"
+                android:text="@string/menuitemBack" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/subpage2"
+        style="@style/AppTheme.SubPage"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/AppTheme.SubPageTitle"
+            android:text="@string/pageTitle2" />
+
+        <ScrollView
+            style="@style/AppTheme.SubPageScrollView">
+
+            <LinearLayout
+                style="@style/AppTheme.ScrollableWrapper">
+
+
+                <TextView
+                    style="@style/AppTheme.SubPageText"
+                    android:text="@string/lastoria1" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            style="@style/AppTheme.SecondaryMenuLayout">
+
+            <Button
+                style="@style/AppTheme.backToMenuButton"
+                android:onClick="goToMenuPage"
+                android:text="@string/menuitemBack" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/subpage3"
+        style="@style/AppTheme.SubPage"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/AppTheme.SubPageTitle"
+            android:text="@string/pageTitle3" />
+
+        <ScrollView
+            style="@style/AppTheme.SubPageScrollView">
+
+            <LinearLayout
+                style="@style/AppTheme.ScrollableWrapper">
+
+                <TextView
+                    style="@style/AppTheme.SubPageTitle2"
+                    android:text="@string/chiesa_title" />
+
+                <TextView
+                    style="@style/AppTheme.SubPageText"
+                    android:text="@string/chiesa_desc" />
+
+                <TextView
+                    style="@style/AppTheme.SubPageTitle2"
+                    android:text="@string/vulpilio_title" />
+
+                <TextView
+                    style="@style/AppTheme.SubPageText"
+                    android:text="@string/vulpilio_desc" />
+
+                <TextView
+                    style="@style/AppTheme.SubPageTitle2"
+                    android:text="@string/disciplinanti_title" />
+
+                <TextView
+                    style="@style/AppTheme.SubPageText"
+                    android:text="@string/disciplinanti_desc" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            style="@style/AppTheme.SecondaryMenuLayout">
+
+            <Button
+                style="@style/AppTheme.backToMenuButton"
+                android:onClick="goToMenuPage"
+                android:text="@string/menuitemBack" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/subpage4"
+        style="@style/AppTheme.SubPage"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/AppTheme.SubPageTitle"
+            android:text="@string/pageTitle4" />
+
+        <ScrollView
+            style="@style/AppTheme.SubPageScrollView">
+
+            <LinearLayout
+                style="@style/AppTheme.ScrollableWrapper">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/map_content_description"
+                    android:src="@drawable/come_arrivare" />
+
+                <TextView
+                    style="@style/AppTheme.SubPageTitle2"
+                    android:text="@string/come_arrivare_auto_title" />
+
+                <TextView
+                    style="@style/AppTheme.SubPageText"
+                    android:text="@string/come_arrivare_auto" />
+
+                <TextView
+                    style="@style/AppTheme.SubPageTitle2"
+                    android:text="@string/come_arrivare_treno_title" />
+
+                <TextView
+                    style="@style/AppTheme.SubPageText"
+                    android:text="@string/come_arrivare_treno" />
+
+                <TextView
+                    style="@style/AppTheme.SubPageTitle2"
+                    android:text="@string/come_arrivare_bus_title" />
+
+                <TextView
+                    style="@style/AppTheme.SubPageText"
+                    android:text="@string/come_arrivare_bus" />
+
+                <TextView
+                    style="@style/AppTheme.SubPageTitle2"
+                    android:text="@string/come_arrivare_aereo_title" />
+
+                <TextView
+                    style="@style/AppTheme.SubPageText"
+                    android:text="@string/come_arrivare_aereo" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            style="@style/AppTheme.SecondaryMenuLayout">
+
+            <Button
+                style="@style/AppTheme.backToMenuButton"
+                android:layout_weight="1"
+                android:onClick="openMap"
+                android:text="@string/open_map_label" />
+
+            <Button
+                style="@style/AppTheme.backToMenuButton"
+                android:layout_weight="1"
+                android:onClick="goToMenuPage"
+                android:text="@string/menuitemBack" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/subpage5"
+        style="@style/AppTheme.SubPage"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/AppTheme.SubPageTitle"
+            android:text="@string/pageTitle5" />
+
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <LinearLayout
+            style="@style/AppTheme.SecondaryMenuLayout">
+
+            <Button
+                style="@style/AppTheme.backToMenuButton"
+                android:onClick="goToMenuPage"
+                android:text="@string/menuitemBack" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/menuPage"
+        style="@style/AppTheme.LayoutMainPage"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/logo2"
+            style="@style/AppTheme.logoImg"
+            android:onClick="goToMainPage"
+            android:src="@drawable/stemma2" />
+
+        <LinearLayout
+            android:id="@+id/mainMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-280dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/itemButton1"
+                style="@style/AppTheme.MenuButton"
+                android:onClick="goToPage"
+                android:text="@string/menuitem1" />
+
+            <Button
+                android:id="@+id/itemButton2"
+                style="@style/AppTheme.MenuButton"
+                android:onClick="goToPage"
+                android:text="@string/menuitem2" />
+
+            <Button
+                android:id="@+id/itemButton3"
+                style="@style/AppTheme.MenuButton"
+                android:onClick="goToPage"
+                android:text="@string/menuitem3" />
+
+            <Button
+                android:id="@+id/itemButton4"
+                style="@style/AppTheme.MenuButton"
+                android:onClick="goToPage"
+                android:text="@string/menuitem4" />
+
+            <Button
+                android:id="@+id/itemButton5"
+                style="@style/AppTheme.MenuButton"
+                android:onClick="goToPage"
+                android:text="@string/menuitem5" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainPage"
+        style="@style/AppTheme.LayoutMainPage"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/logo1"
+            style="@style/AppTheme.logoImg"
+            android:src="@drawable/stemma2"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentBottom="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/logo1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AppTheme.SplashTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/splash_title" />
+
+            <TextView
+                style="@style/AppTheme.SplashTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/splash_title2" />
+
+            <Button
+                android:id="@+id/startTourBtn"
+                style="@style/AppTheme.MenuButtonStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape"
+                android:onClick="startTour"
+                android:text="@string/start_btn_text" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

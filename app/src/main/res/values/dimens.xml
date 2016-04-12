@@ -1,0 +1,9 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <integer name="custom_match_parent">-1</integer>
+    <dimen name="page_open">@integer/custom_match_parent</dimen>
+    <dimen name="page_closed">0dp</dimen>
+</resources>
