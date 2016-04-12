@@ -31,10 +31,15 @@ public class MainActivity extends ActionBarActivity {
      */
     private Contatto[] contatti = new Contatto[] {
             new Contatto("Comune", "Via Roma, 50", R.drawable.ic_location_city_black_24dp, "(+39)0141943071", "info@comune.villafrancadasti.at.it"),
-            new Contatto("Medici", "Via Roma, 62", R.drawable.ic_add_box_black_24dp, "(+39)0141941049"),
+            new Contatto("Villa Med", "Via Roma, 62", R.drawable.ic_add_box_black_24dp, "(+39)0141941049"),
             new Contatto("Farmacia", "Via Roma 70", R.drawable.ic_local_pharmacy_black_24dp, "(+39)0141943081"),
             new Contatto("Carabinieri", "Regione Pieve, 3", R.drawable.ic_pan_tool_black_24dp, "(+39)0141942433"),
             new Contatto("Stazione ferroviaria", "Piazza Luigi Capriolo, 1", R.drawable.ic_train_black_24dp),
+            new Contatto("Comune - Servizi demografici", "Via Roma, 50", R.drawable.ic_location_city_black_24dp, "(+39)0141943071"),
+            new Contatto("Comune - Servizi sociali", "Via Roma, 50", R.drawable.ic_location_city_black_24dp, "(+39)0141943071"),
+            new Contatto("Comune - Ufficio commercio/agricoltura/turismo", "Via Roma, 50", R.drawable.ic_location_city_black_24dp, "(+39)0141943885"),
+            new Contatto("Comune - Ufficio ragioneria tributi", "Via Roma, 50", R.drawable.ic_location_city_black_24dp, "(+39)0141943071"),
+            new Contatto("Comune - Ufficio tecnico", "Via Roma, 50", R.drawable.ic_location_city_black_24dp, "(+39)0141943885"),
     };
 //    final ArrayList<Contatto> listp = new ArrayList<Contatto>();
 
@@ -212,4 +217,5 @@ public class MainActivity extends ActionBarActivity {
             Toast.makeText(MainActivity.this, R.string.noMapsAvailable, Toast.LENGTH_SHORT).show();
         }
     }
+
 }

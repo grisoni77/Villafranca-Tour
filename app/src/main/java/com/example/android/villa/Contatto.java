@@ -1,7 +1,9 @@
 package com.example.android.villa;
 
 /**
- * Created by cris on 12/04/2016.
+ * Questa classe descrive un oggetto di tipo Contatto.
+ * Ogni oggetto di tipo Contatto è mappato su una singola
+ * riga della ListView utilizzata nella sottopagina "Indirizzi utili"
  */
 public class Contatto {
     String nome;
