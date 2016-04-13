@@ -15,12 +15,19 @@ import android.widget.Toast;
 /**
  * Questa classe è l'adapter che permette di mappare
  * le proprietà della classe Contatto sul layout list_item
- * utilizzaot per ogni riga della ListView della sottopagina
- * Indirizzi utili
+ * utilizzato per ciascuna delle righe della ListView
+ * della sottopagina Indirizzi utili
  */
 public class ContattoAdapter extends ArrayAdapter<Contatto> {
 
+    /**
+     * Contesto in cui si trova la ListView (MainActivity)
+     */
     private final Context context;
+
+    /**
+     * Array dei contatti che contengono i dati da mappare nella ListView
+     */
     private final Contatto[] values;
 
     /**
@@ -35,11 +42,22 @@ public class ContattoAdapter extends ArrayAdapter<Contatto> {
         this.values = values;
     }
 
+    /**
+     * Questo metodo viene chiamato per ogni elemento della ListView
+     * Si occupa di mappare le diverse proprietà dell'oggetto Contatto
+     * sulle specifiche view che compongono il layout list_item usato
+     * per ciascuna delle righe della ListView
+     *
+     * @param position posizione all'interno dell'Array dell'oggetto Contatto che si sta mappando
+     * @param convertView vecchia view da riutilizzare (non usata nel nostro caso)
+     * @param parent view padre a cui viene attaccata la nuova view (la ListView)
+     * @return
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        // Inflate il layout list_item nell'oggetto rowView
+        // Estrae il layout list_item e lo infila nell'oggetto rowView
         LinearLayout rowView = (LinearLayout) inflater.inflate(R.layout.list_item, parent, false);
         // Cerca le viste da valorizzare nel layout list_item
         ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
@@ -57,12 +75,16 @@ public class ContattoAdapter extends ArrayAdapter<Contatto> {
         // aggiorno altezza
         rowHeight += imageView.getMeasuredHeight() + nomeView.getMeasuredHeight() + addressView.getMeasuredHeight();
         // Alcuni campi sono opzionali per cui popolo e mostro le rispettive view solo se sono valorizzati
+        // In questo fase definisco anche gli OnCLickListener per le icone
         if (value.telefono != null) {
+            // popolo e mostro la text view del telefono
             TextView phoneView = (TextView) rowView.findViewById(R.id.telefono);
             phoneView.setText("Telefono: " + value.telefono);
             phoneView.setVisibility(View.VISIBLE);
+            // mostro l'icona del telefono
             ImageView phoneIcon = (ImageView) rowView.findViewById(R.id.icon_phone);
             phoneIcon.setVisibility(View.VISIBLE);
+            // aggiorno altezza
             rowHeight += phoneView.getMeasuredHeight();
             // Set click Listener sull'icona in modo che faccia una chiamata telefonica al numero del contatto
             phoneIcon.setOnClickListener(new View.OnClickListener() {
@@ -77,12 +99,16 @@ public class ContattoAdapter extends ArrayAdapter<Contatto> {
             });
         }
         // Alcuni campi sono opzionali per cui popolo e mostro le rispettive view solo se sono valorizzati
+        // In questo fase definisco anche gli OnCLickListener per le icone
         if (value.email != null) {
+            // popolo e mostro la text view della mail
             TextView emailView = (TextView) rowView.findViewById(R.id.email);
             emailView.setText("E-mail: "+value.email);
             emailView.setVisibility(View.VISIBLE);
+            // mostro l'icona della mail
             ImageView emailIcon = (ImageView) rowView.findViewById(R.id.icon_email);
             emailIcon.setVisibility(View.VISIBLE);
+            // aggiorno altezza
             rowHeight += emailView.getMeasuredHeight();
             // Set click Listener sull'icona in modo che mandi un Intent per mandare un email
             emailIcon.setOnClickListener(new View.OnClickListener() {
@@ -96,10 +122,13 @@ public class ContattoAdapter extends ArrayAdapter<Contatto> {
                 }
             });
         }
-        //
+
+        // Imposta l'altezza della riga a rowHeight (calcolata in base all'effettivo contenuto della riga)
         ViewGroup.LayoutParams params = rowView.getLayoutParams();
         params.height = rowHeight;
         rowView.setLayoutParams(params);
+
+        // Ritorna la View da inserire nella ListView
         return rowView;
     }
 }

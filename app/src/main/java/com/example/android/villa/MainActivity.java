@@ -41,7 +41,6 @@ public class MainActivity extends ActionBarActivity {
             new Contatto("Comune - Ufficio ragioneria tributi", "Via Roma, 50", R.drawable.ic_location_city_black_24dp, "(+39)0141943071"),
             new Contatto("Comune - Ufficio tecnico", "Via Roma, 50", R.drawable.ic_location_city_black_24dp, "(+39)0141943885"),
     };
-//    final ArrayList<Contatto> listp = new ArrayList<Contatto>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +62,7 @@ public class MainActivity extends ActionBarActivity {
     {
         int id = view.getId();
 
+        // in base all'id della view apro una specifica sottopagina
         if (id == R.id.itemButton1) {
             goToSubPage(R.id.subpage1);
         }
@@ -86,8 +86,8 @@ public class MainActivity extends ActionBarActivity {
      */
     private void goToSubPage(int page)
     {
-        currentPage = page;
         hideMenuPage();
+        currentPage = page;
         showSubPage(page);
     }
 
@@ -123,7 +123,7 @@ public class MainActivity extends ActionBarActivity {
         currentPage = R.id.menuPage;
         showMenuPage();
 
-        // ANIMATES MENU
+        // Implementa una semplice animazione che fa scorrere il menu dal basso verso l'alto
         final LinearLayout menuView = (LinearLayout) findViewById(R.id.mainMenu);
         final RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) menuView.getLayoutParams();
         ValueAnimator animator = ValueAnimator.ofInt(params.bottomMargin, 0);
@@ -187,7 +187,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
     /**
-     * MOstra la subPage con id page
+     * Mostra la subPage con id page
+     *
      * @param page id della subPage
      */
     private void showSubPage(int page)
