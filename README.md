@@ -8,8 +8,8 @@ To build this project in Android Studio follow these steps:
 - Choose "Import project (Eclipse ADT, Gradle, etc.)"
 - Select "Run 'app'" from Run menu 
 
-## Idea definition
-Idea definition and target user population are described in file idea.txt under this repository
+## App concept
+Idea definition and target user population are described in file [idea.md](idea.md) under this repository
 
 ## App design
 Some sketches describing the graphical layout of the app have been included in 'design' folder:
