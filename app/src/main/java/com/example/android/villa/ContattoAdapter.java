@@ -79,7 +79,7 @@ public class ContattoAdapter extends ArrayAdapter<Contatto> {
         if (value.telefono != null) {
             // popolo e mostro la text view del telefono
             TextView phoneView = (TextView) rowView.findViewById(R.id.telefono);
-            phoneView.setText("Telefono: " + value.telefono);
+            phoneView.setText(String.format(context.getString(R.string.phone_contact), value.telefono));
             phoneView.setVisibility(View.VISIBLE);
             // mostro l'icona del telefono
             ImageView phoneIcon = (ImageView) rowView.findViewById(R.id.icon_phone);
@@ -103,7 +103,7 @@ public class ContattoAdapter extends ArrayAdapter<Contatto> {
         if (value.email != null) {
             // popolo e mostro la text view della mail
             TextView emailView = (TextView) rowView.findViewById(R.id.email);
-            emailView.setText("E-mail: "+value.email);
+            emailView.setText(String.format(context.getString(R.string.email_contact), value.email));
             emailView.setVisibility(View.VISIBLE);
             // mostro l'icona della mail
             ImageView emailIcon = (ImageView) rowView.findViewById(R.id.icon_email);
@@ -116,6 +116,30 @@ public class ContattoAdapter extends ArrayAdapter<Contatto> {
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_SENDTO);
                     intent.setData(Uri.parse("mailto:" + value.email));
+                    if (intent.resolveActivity(context.getPackageManager()) != null) {
+                        context.startActivity(intent);
+                    }
+                }
+            });
+        }
+        // Alcuni campi sono opzionali per cui popolo e mostro le rispettive view solo se sono valorizzati
+        // In questo fase definisco anche gli OnCLickListener per le icone
+        if (value.website != null) {
+            // popolo e mostro la text view della mail
+            TextView siteView = (TextView) rowView.findViewById(R.id.website);
+            siteView.setText(String.format(context.getString(R.string.www), value.website));
+            siteView.setVisibility(View.VISIBLE);
+            // mostro l'icona della mail
+            ImageView websiteIcon = (ImageView) rowView.findViewById(R.id.icon_website);
+            websiteIcon.setVisibility(View.VISIBLE);
+            // aggiorno altezza
+            rowHeight += siteView.getMeasuredHeight();
+            // Set click Listener sull'icona in modo che mandi un Intent per mandare un email
+            websiteIcon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(value.website));
                     if (intent.resolveActivity(context.getPackageManager()) != null) {
                         context.startActivity(intent);
                     }

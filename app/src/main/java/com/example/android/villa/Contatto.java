@@ -7,30 +7,17 @@ package com.example.android.villa;
  */
 public class Contatto {
 
-    // proprietà obbligatorie
+    // proprietà del contatto
     String nome;
     String address;
     int icon;
-
-    // queste proprietà sono opzionali
     String telefono;
     String email;
+    String website;
+
 
     /**
-     * Primo costruttore (no tel, no mail)
-     *
-     * @param nome
-     * @param address
-     * @param icon
-     */
-    public Contatto(String nome, String address, int icon) {
-        this.nome = nome;
-        this.address = address;
-        this.icon = icon;
-    }
-
-    /**
-     * Secondo costruttore (si tel, no mail)
+     * Primo costruttore (si tel, no mail)
      *
      * @param nome
      * @param address
@@ -45,7 +32,7 @@ public class Contatto {
     }
 
     /**
-     * Terzo costruttore (si tel, si mail)
+     * Secondo costruttore (include anche email e website)
      *
      * @param nome
      * @param address
@@ -53,13 +40,13 @@ public class Contatto {
      * @param telefono
      * @param email
      */
-    public Contatto(String nome, String address, int icon, String telefono, String email) {
+    public Contatto(String nome, String address, int icon, String telefono, String email, String website) {
         this.nome = nome;
         this.address = address;
         this.icon = icon;
         this.telefono = telefono;
         this.email = email;
+        this.website = website;
     }
-
 }
 

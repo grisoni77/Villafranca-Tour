@@ -6,17 +6,11 @@ import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.Animation;
 import android.view.animation.BounceInterpolator;
-import android.view.animation.Transformation;
-import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
-
-import java.util.ArrayList;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -29,18 +23,7 @@ public class MainActivity extends ActionBarActivity {
     /**
      * Array di contatti per la ListView "Indirizzi utili"
      */
-    private Contatto[] contatti = new Contatto[] {
-            new Contatto("Comune", "Via Roma, 50", R.drawable.ic_location_city_black_24dp, "(+39)0141943071", "info@comune.villafrancadasti.at.it"),
-            new Contatto("Villa Med", "Via Roma, 62", R.drawable.ic_add_box_black_24dp, "(+39)0141941049"),
-            new Contatto("Farmacia", "Via Roma 70", R.drawable.ic_local_pharmacy_black_24dp, "(+39)0141943081"),
-            new Contatto("Carabinieri", "Regione Pieve, 3", R.drawable.ic_pan_tool_black_24dp, "(+39)0141942433"),
-            new Contatto("Stazione ferroviaria", "Piazza Luigi Capriolo, 1", R.drawable.ic_train_black_24dp),
-            new Contatto("Comune - Servizi demografici", "Via Roma, 50", R.drawable.ic_location_city_black_24dp, "(+39)0141943071"),
-            new Contatto("Comune - Servizi sociali", "Via Roma, 50", R.drawable.ic_location_city_black_24dp, "(+39)0141943071"),
-            new Contatto("Comune - Ufficio commercio/agricoltura/turismo", "Via Roma, 50", R.drawable.ic_location_city_black_24dp, "(+39)0141943885"),
-            new Contatto("Comune - Ufficio ragioneria tributi", "Via Roma, 50", R.drawable.ic_location_city_black_24dp, "(+39)0141943071"),
-            new Contatto("Comune - Ufficio tecnico", "Via Roma, 50", R.drawable.ic_location_city_black_24dp, "(+39)0141943885"),
-    };
+    private Contatto[] contatti;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +31,21 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         // inizializza la pagina corrente alla mainPage
         currentPage = R.id.mainPage;
+        // inizializza contatti
+        contatti = new Contatto[] {
+                new Contatto(getString(R.string.comune), "Via Roma, 50", R.drawable.ic_city_hall,
+                        "(+39)0141943071", "info@comune.villafrancadasti.at.it", "http://www.comune.villafrancadasti.at.it"),
+                new Contatto(getString(R.string.villamed), "Via Roma, 62", R.drawable.ic_hospital_2, "(+39)0141941049"),
+                new Contatto(getString(R.string.farmacia), "Via Roma 70", R.drawable.ic_hospital, "(+39)0141943081"),
+                new Contatto(getString(R.string.carabinieri), "Regione Pieve, 3", R.drawable.ic_police_station, "(+39)0141942433"),
+                new Contatto(getString(R.string.postoffice), "Piazza Marconi, 47", R.drawable.ic_post_office, "(+39)0141943069"),
+                new Contatto(getString(R.string.railway), "Piazza Luigi Capriolo, 1", R.drawable.ic_city_railway_station, null),
+                new Contatto(getString(R.string.comune_demo), "Via Roma, 50", R.drawable.ic_city_hall, "(+39)0141943071"),
+                new Contatto(getString(R.string.comunu_sociali), "Via Roma, 50", R.drawable.ic_city_hall, "(+39)0141943071"),
+                new Contatto(getString(R.string.comune_commercio), "Via Roma, 50", R.drawable.ic_city_hall, "(+39)0141943885"),
+                new Contatto(getString(R.string.comune_tributi), "Via Roma, 50", R.drawable.ic_city_hall, "(+39)0141943071"),
+                new Contatto(getString(R.string.comune_tecnico), "Via Roma, 50", R.drawable.ic_city_hall, "(+39)0141943885"),
+        };
         // Inizializza ListView con i contatti
         final ListView contattiList = (ListView) findViewById(R.id.listView1);
         final ContattoAdapter adapter = new ContattoAdapter(this, contatti);

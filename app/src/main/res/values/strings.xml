@@ -61,4 +61,18 @@ Con Regio Decreto del 1863 il suo nome diviene Villafranca d\'Asti.</string>
     <string name="vulpilio_desc">Nella borgata S. Antonio, sulla cima del colle Vulpilio, sorge la piccola cappella romanica della Madonna della Neve.\nEra in origine la chiesa del villaggio poi scomparso di Vulpilio, già attestato al principio del XII secolo sotto la signoria del vescovo di Asti, e allora dipendeva probabilmente dalla pieve di Musanza; dedicata a Santa Maria, compare per la prima volta in un documento del 1228 e ritorna al principio del Trecento come commenda del Capitolo della Cattedrale di Asti.\n\nVerso gli inizi dell 17° secolo la cappella divenne di esclusiva pertinenza della famiglia Goria,a cui apparteneva Giacomo, il vescovo di Vercelli, fondatore in Villafranca dell\'Opera Pia Sant\'Elena.\n\n Il titolo di \"Madonna della Neve\" si diffuse con ogni probabilità nei primi anni del 18° Secolo: così è infatti definita dal visitatore pastorale Mons. Todone nel 1729.\n\n Nel 1828 ai Goria succedettero, in qualità di patroni, i conti Canalis di Cumiana.\n\nCirca l\'edificio, la conformazione del basamento, delle lesene e delle monofore sembrerebbe indicare che l\'abside della chiesa conservi sotto l\'intonaco e per tutta l\'altezza delle semicolonne, la muratura romanica.\nLa facciata è a capanna e il portale è affiancato e sovrastato da aperture rettangolari. Il campanile, con cella campanaria bifora e tetto a padiglione è di epoca barocca.\nSulla volta a botte dell\'interno è dipinto un cielo stellato. La piccola costruzione sul lato sud è divisa in due piani: al piano terra vi è la sacrestia, al primo piano due statue, un Santo Arcangelo e il Sacro Cuore di Gesù.\nSecondo la tradizione, nei suoi pressi sono sepolti i caduti della violenta battaglia qui avvenuta nel 1554 durante le guerre tra Francesi e Spagnoli.</string>
     <string name="disciplinanti_title">Chiesa dei Disciplinanti</string>
     <string name="disciplinanti_desc">La chiesa dei Disciplinanti (Battuti Neri) dedicata a S. Giovanni Evangelista sorge poco distante, in direzione ovest. Costruita nel 1701 sul sito di un preesistente edificio di culto, ricordato già nel 1607, è composta da un\'aula centrale ottagonale di notevole altezza, da un elegante pronao ad arcata semplice e da due locali un tempo adibiti a sacrestia e cappella (S. Anna). Dalla prima metà dell\'Ottocento sorge al suo fianco il campanile in mattoni a vista, staccato dal resto dell\'edificio. Dopo un radicale intervento di restauro operato a partire dal 1983, la chiesa è stata adibita a teatro comunale.\n\nNella via S. Rocco, che inizia alle spalle di S. Giovanni, a circa 400 m in direzione sud-ovest, s\'incontra l\'omonoma Cappella, edificata all\'inizio del 17° secolo per impetrare la protezione celeste dal flagello della peste. È stata restaurata nel 1967.</string>
+    <string name="comune">Comune</string>
+    <string name="villamed">Villa Med</string>
+    <string name="farmacia">Farmacia</string>
+    <string name="carabinieri">Carabinieri</string>
+    <string name="postoffice">Ufficio postale</string>
+    <string name="railway">Stazione ferroviaria</string>
+    <string name="comune_demo">Comune - Servizi demografici</string>
+    <string name="comunu_sociali">Comune - Servizi sociali</string>
+    <string name="comune_commercio">Comune - Ufficio commercio/agricoltura/turismo</string>
+    <string name="comune_tributi">Comune - Ufficio ragioneria tributi</string>
+    <string name="comune_tecnico">Comune - Ufficio tecnico</string>
+    <string name="www">"Www: %s"</string>
+    <string name="email_contact">"E-mail: %s"</string>
+    <string name="phone_contact">"Telefono: %s"</string>
 </resources>
