@@ -6,7 +6,7 @@ To build this project in Android Studio follow these steps:
 - Clone this repository: git clone https://github.com/grisoni77/Villafranca-Tour.git <your_project_directory>
 - Open Android Studio
 - Choose "Import project (Eclipse ADT, Gradle, etc.)" and select the directory in which you cloned this repository at the first step
-- Select "Run 'app'" from Run menu to deploy the App to a connected devide or emulator
+- Select "Run 'app'" from Run menu to deploy the App to a connected device or emulator
 
 ## App concept
 Idea definition and target user population are described in file [idea.md](idea.md) under this repository
